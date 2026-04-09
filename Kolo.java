@@ -1,26 +1,21 @@
 public class Kolo extends Figura {
-// ── Pole własne klasy Kolo ────────────────────────────────────
+
 private double promien;
-// ── Konstruktor ───────────────────────────────────────────
-// super(kolor) wywołuje konstruktor klasy nadrzędnej (Figura).
-// MUSI być pierwszą instrukcją w konstruktorze.
 public Kolo(double promien, String kolor) {
-super(kolor); // wywołaj Figura(kolor)
+super(kolor); 
 this.promien = promien;
 }
-// ── Implementacja metody abstrakcyjnej obliczPole() ──────────────────────
-// Adnotacja @Override informuje kompilator: "nadpisuję metodę z klasy wyżej".
-// To dobra praktyka — kompilator sprawdzi czy nazwa metody jest poprawna.
+
 @Override
 public double obliczPole() {
-return Math.PI * promien * promien; // π * r²
+return Math.PI * promien * promien; 
 }
-// ── Implementacja metody abstrakcyjnej obliczObwod() ────────────────────
+
 @Override
 public double obliczObwod() {
-return 2 * Math.PI * promien; // 2 * π * r
+return 2 * Math.PI * promien; 
 }
-// ── Własna metoda klasy Kolo (nie ma jej w Figura) ──────────────────────
+
 public double getPromien() {
 return promien;
 }
